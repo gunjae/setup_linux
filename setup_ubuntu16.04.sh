@@ -13,7 +13,6 @@ echo "${ITEM}"
 
 sudo apt-get update
 sudo apt-get -f install
-sudo apt-get install ${ITEM}
 sudo apt-get autoclean
 sudo apt-get autoremove
 

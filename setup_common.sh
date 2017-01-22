@@ -29,7 +29,7 @@ function install_from_ppa() {
 
 function install_from_base() {
 	local _NAME=$1
-	local _ITEM=$3
+	local _ITEM=$2
 	confirm ${_NAME} && ITEM="${ITEM} ${_ITEM}"
 }
 
@@ -53,7 +53,7 @@ echo "***************************************************"
 echo " Basic applications"
 install_from_base "SSH server" "openssh-server"
 install_from_base "g++" "g++ g++-multilib"
-install_from_base "linux-firmware" "linux-firmware linux-firmware-nonfree"
+install_from_base "linux-firmware" "linux-firmware"
 install_from_base "cifs-utils" "cifs-utils"
 echo ""
 
@@ -80,5 +80,5 @@ echo "***************************************************"
 echo " End of the common configuration"
 echo " Followings will be installed..."
 echo "${ITEM}"
-
 sudo apt-get install ${ITEM}
+ITEM=""

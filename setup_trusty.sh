@@ -22,10 +22,16 @@ install_from_ppa "arc-icons" "ppa:noobslab/icons" "arc-icons"
 install_from_ppa "paper theme" "ppa:snwh/pulp" "gnome-themes-standard paper-gtk-theme paper-icon-theme"
 install_from_base "nanum-fonts" "fonts-nanum fonts-nanum-coding"
 install_from_base "un-fonts" "fonts-unfonts-core fonts-unfonts-extra"
-install_from_base "inconsolata, hack, roboto" "fonts-inconsolata fonts-hack-ttf fonts-roboto"
+install_from_base "inconsolata and roboto" "fonts-inconsolata fonts-roboto"
 install_from_base "noto-fonts" "fonts-noto"
 install_from_base "noto-fonts-cjk" "fonts-noto-cjk"
 echo ""
+
+echo "Followings will be installed..."
+echo "${ITEM}"
+sudo apt-get update
+sudo apt-get install ${ITEM}
+ITEM=""
 
 echo "***************************************************"
 echo " Desktop environments"
@@ -33,6 +39,12 @@ install_from_ppa "xfce desktop" "ppa:xubuntu-dev/xfce-4.12" "xfce4 xfce4-goodies
 install_from_ppa "budgie desktop" "ppa:evolve-os/ppa" "budgie-desktop"
 install_from_ppa "cinnamon" "ppa:moorkai/cinnamon" "cinnamon"
 echo ""
+
+echo "Followings will be installed..."
+echo "${ITEM}"
+sudo apt-get update
+sudo apt-get install ${ITEM}
+ITEM=""
 
 echo "***************************************************"
 echo " Applications"
@@ -47,7 +59,7 @@ install_from_base "tomahawk music player" "tomahawk"
 install_from_ppa "darktable" "ppa:pmjdebruijn/darktable-release" "darktable exiv2"
 install_from_ppa "digiKam5" "ppa:philip5/extra" "digikam5"
 install_from_ppa "handbrake" "ppa:stebbins/handbrake-releases" "handbrake"
-install_from_ppa "LibreOffice (version 5.2)" "ppa:libreoffice/ppa" "libreoffice libreoffice-style-breeze" && sudo apt-get purge libreoffice&
+install_from_ppa "LibreOffice (version 5.2)" "ppa:libreoffice/ppa" "libreoffice libreoffice-style-*" && sudo apt-get purge libreoffice-*
 install_from_ppa "Kodi (XBMC)" "ppa:team-xbmc/ppa" "kodi kodi-audioencoder*"
 install_from_base "mpv" "mpv"
 install_from_ppa "smplayer" "ppa:rvm/smplayer" "smplayer smtube smplayer-themes smplayer-skins"
@@ -84,3 +96,8 @@ install_from_ppa "PS2X" "ppa:gregory-hainaut/pcsx2.official.ppa" "pcsx2"
 install_from_ppa "dolphin emulator" "ppa:dolphin-emu/ppa" "dolphin-emu"
 install_from_base "dosbox" "dosbox"
 
+echo "Followings will be installed..."
+echo "${ITEM}"
+sudo apt-get update
+sudo apt-get install ${ITEM}
+ITEM=""
