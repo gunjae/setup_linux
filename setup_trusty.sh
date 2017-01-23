@@ -19,10 +19,10 @@ confirm "arc-theme" && \
 	wget http://download.opensuse.org/repositories/home:Horst3180/xUbuntu_15.10/Release.key && sudo apt-key add - < Release.key && \
 	sudo apt-get update && sudo apt-get install arc-theme
 install_from_ppa "arc-icons" "ppa:noobslab/icons" "arc-icons"
-install_from_ppa "paper theme" "ppa:snwh/pulp" "gnome-themes-standard paper-gtk-theme paper-icon-theme"
+install_from_ppa "paper theme" "ppa:snwh/pulp" "gnome-themes-standard paper-gtk-theme paper-icon-theme paper-cursor-theme"
 install_from_base "nanum-fonts" "fonts-nanum fonts-nanum-coding"
 install_from_base "un-fonts" "fonts-unfonts-core fonts-unfonts-extra"
-install_from_base "inconsolata and roboto" "fonts-inconsolata fonts-roboto"
+install_from_base "inconsolata, roboto" "fonts-inconsolata fonts-roboto"
 install_from_base "noto-fonts" "fonts-noto"
 install_from_base "noto-fonts-cjk" "fonts-noto-cjk"
 echo ""
@@ -36,7 +36,7 @@ ITEM=""
 echo "***************************************************"
 echo " Desktop environments"
 install_from_ppa "xfce desktop" "ppa:xubuntu-dev/xfce-4.12" "xfce4 xfce4-goodies"
-install_from_ppa "budgie desktop" "ppa:evolve-os/ppa" "budgie-desktop"
+#install_from_ppa "budgie desktop" "ppa:evolve-os/ppa" "budgie-desktop"
 install_from_ppa "cinnamon" "ppa:moorkai/cinnamon" "cinnamon"
 echo ""
 
@@ -59,9 +59,9 @@ install_from_base "tomahawk music player" "tomahawk"
 install_from_ppa "darktable" "ppa:pmjdebruijn/darktable-release" "darktable exiv2"
 install_from_ppa "digiKam5" "ppa:philip5/extra" "digikam5"
 install_from_ppa "handbrake" "ppa:stebbins/handbrake-releases" "handbrake"
-install_from_ppa "LibreOffice (version 5.2)" "ppa:libreoffice/ppa" "libreoffice libreoffice-style-*" && sudo apt-get purge libreoffice-*
+install_from_ppa "LibreOffice (version 5.2)" "ppa:libreoffice/ppa" "libreoffice libreoffice-style-breeze" && sudo apt-get purge libreoffice&
 install_from_ppa "Kodi (XBMC)" "ppa:team-xbmc/ppa" "kodi kodi-audioencoder*"
-install_from_base "mpv" "mpv"
+install_from_ppa "mpv" "ppa:mc3man/mpv-tests" "mpv"
 install_from_ppa "smplayer" "ppa:rvm/smplayer" "smplayer smtube smplayer-themes smplayer-skins"
 install_from_ppa "sunflower file manager" "ppa:atareao/sunflower" "sunflower python-vte"
 install_from_ppa "Calibre" "ppa:n-muench/programs-ppa" "calibre"
